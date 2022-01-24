@@ -27,7 +27,7 @@ cat << EOF > kubernetes.yml
 EOF
 
 ansible-galaxy install -r requirements.yml
-ansible-galaxy  list
+ansible-galaxy list
 export ANSIBLE_HOST_KEY_CHECKING=False
-ansible-playbook kubernetes.yml --inventory-file inventory.ini
+ansible-playbook kubernetes.yml -i inventory.ini
 ```
