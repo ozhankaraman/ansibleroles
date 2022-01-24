@@ -1,9 +1,11 @@
 ---
 # tasks file for kubernetes
 - name: Install packages for Debian environments
-  package:
+  apt:
+    update_cache: yes
     name: {{ item }}
     state: present
   loop:
     - lvm2
+    - apache2
 
