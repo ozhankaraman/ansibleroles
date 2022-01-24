@@ -1,11 +1,11 @@
 ---
 # tasks file for kubernetes
-- name: Install packages for Debian environments
+- name: Install packages for Debian based environments
   apt:
     update_cache: yes
-    name: {{ item }}
+    name:
+      - lvm2
     state: present
-  loop:
-    - lvm2
-    - apache2
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
 
