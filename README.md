@@ -1,5 +1,10 @@
 # Kubernetes Ansible Role
+## Initialize a new role named kubernetes and push it to git scm
+```
+ansible-galaxy init kubernetes
+```
 
+## Required Commands to apply role over x1 host
 ```
 cat << EOF > requirements.yml
 - src: https://github.com/ozhankaraman/ansibleroles.git
