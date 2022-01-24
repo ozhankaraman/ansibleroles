@@ -1,0 +1,9 @@
+---
+# tasks file for kubernetes
+- name: Install packages for Debian environments
+  package:
+    name: {{ item }}
+    state: present
+  loop:
+    - lvm2
+
